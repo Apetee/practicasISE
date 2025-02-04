@@ -1,0 +1,102 @@
+    1  lsblk
+    2  ip a
+    3  ip addr
+    4  ip addr add 192.168.56.105/24 dev enp0s8
+    5  sudo ip addr add 192.168.56.105/24 dev enp0s8
+    6  cat /etc/netplan/00-installer-config.yaml 
+    7  sudo vi /etc/netplan/00-installer-config.yaml 
+    8  sudo ip link set enp0s8 up
+    9  ping 192.168.56.1
+   10  ping www.google.com
+   11  sudo reboot
+   12  who
+   13  exit
+   14  who 
+   15  exit
+   16  sudo systemctl enable sshd
+   17  systemctl status sshd
+   18  ssh andres@192.168.56.110
+   19  cd /etc/ssh/sshd_config
+   20  cat /etc/ssh/sshd_config
+   21  sudo vi /etc/ssh/sshd_config
+   22  sudo systemctl restart sshd
+   23  ss -tuln
+   24  sudo vi /etc/ssh/sshd_config
+   25  sudo systemctl restart sshd
+   26  ufw status
+   27  sudo ufw status
+   28  ssh root@192.168.56.110 
+   29  exit
+   30  lsblk
+   31  git init
+   32  ls 
+   33  ls -la
+   34  git clone https://github.com/Apetee/practicasISE.git
+   35  lsblk
+   36  ls -la 
+   37  git clone https://github.com/Apetee/practicasISE.git
+   38  ls 
+   39  cd practicasISE/
+   40  ls 
+   41  touch history-P1-L1.txt
+   42  lsbkl > history-P1-L1.txt 
+   43  lsblk > history-P1-L1.txt 
+   44  cat history-P1-L1.txt 
+   45  git add history-P1-L1.txt 
+   46  git commit -m "P1-L1"
+   47  git congif --global user.email "andresgarrido@correo.ugr.es"
+   48  git config --global user.email "andresgarrido@correo.ugr.es"
+   49  git config --global user.name "Apetee"
+   50  git commit -m "P1-L1"
+   51  git push
+   52  git status
+   53  git push
+   54  ls
+   55  cat history-P1-L1.txt 
+   56  git add .
+   57  git commit -m "P1-L1"
+   58  git push
+   59  ping 8.8.8.8
+   60  git status
+   61  git push origin main
+   62  sudo poweroff
+   63  lsblk
+   64  pyt
+   65  python3
+   66  ls
+   67  cd practicasISE/
+   68  ls
+   69  python3 -m http.server
+   70  ifconfig
+   71  ip all
+   72  ping 8.8.8.8
+   73  ip 
+   74  ip address
+   75  python3 -m http.server
+   76  sudo poweroff
+   77  ls -la
+   78  ip addr
+   79  history
+   80  ip addr
+   81  ping 192.168.56.110
+   82  su root
+   83  sudo vi /etc/netplan/00-installer-config.yaml 
+   84  netplan apply
+   85  sudo netplan apply
+   86  su root
+   87  sudo apt install openssh-server
+   88  systemctl status sshd
+   89  ufw status
+   90  sudo ufw status
+   91  ssh andres@192.168.56.110
+   92  ssh andres@192.168.56.110 -p 22022
+   93  sudo ufw status
+   94  sudo ufw enable
+   95  sudo ufw allow 22022
+   96  ss -tuln
+   97  sudo vi /etc/ssh/sshd_config
+   98  ls 
+   99  cd practicasISE/
+  100  ls 
+  101  touch historialUbuntu-P2-L1.txt
+  102  history > historialUbuntu-P2-L1.txt 
