@@ -1,0 +1,57 @@
+    1  who
+    2  exit
+    3  ls -la
+    4  ip addr
+    5  ping 192.168.56.105
+    6  sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s8 
+    7  su root
+    8  ssh andres@192.168.56.105
+    9  sudo firewall-cmd --add-port=22/tpc
+   10  su root
+   11  sudo firewall-cmd --add-port=22/tpc
+   12  sudo firewall-cmd --add-port=22/tcp
+   13  ssh andres@192.168.56.105
+   14  ssh andres@192.168.56.105 22022/tcp
+   15  ssh andres@192.168.56.105 -p 22022
+   16  semanage port -l | grep ssh
+   17  sudo semanage port -l | grep ssh
+   18  ls 
+   19  touch historialRockyP2-L1.txt
+   20  history > historialRockyP2-L1.txt
+ AQUI EMPIEZA LA PARTE DE ROOT
+    1  systemctl status
+    2  ip a
+    3  poweroff
+    4  dnf install epel-release
+    5  dnf provides sshfs
+    6  dnf install sshfs
+    7  dnf install httpd php mariadb mariadb-server php-mysqlnd
+    8  systemctl status httpd
+    9  systemctl start httpd
+   10  systemctl enable httpd
+   11  systemctl status httpd
+   12  curl 127.0.0.1
+   13  firewall-cmd --add-port=80/tcp --permanent
+   14  firewall-cmd --reload
+   15  php -a
+   16  systemctl status mariadb
+   17  systemctl enable mariadb
+   18  systemctl start mariadb
+   19  mysql -u root
+   20  poweroff
+   21  sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s8 
+   22  history
+   23  sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s8 
+   24  systemctl status sshd
+   25  dnf install openssh-server
+   26  systemctl status sshd
+   27  systemctl start sshd
+   28  systemctl enable sshd
+   29  systemctl status sshd
+   30  ssh andres@192.168.56.105
+   31  su andres
+   32  vi /etc/sudoers
+   33  reboot
+   34  ls
+   35  history
+   36  history >> historialRockyP2-L1.txt 
