@@ -1,0 +1,53 @@
+    1  passwd andres
+    2  usermod -a -G wheel andres
+    3  cat /etc/sudoers | grep andres
+    4  su andres
+    5  systemctl status
+    6  cp -a /var/. /new_var
+    7  ls -laZ /var
+    8  sudo vi /etc/fstab 
+    9  lsblk
+   10  mount -a
+   11  sudo vi /etc/fstab 
+   12  lsblk
+   13  mount -a
+   14  lsblk
+   15  sudo vi /etc/fstab 
+   16  mount -a
+   17  umount /dev/rl/new_var 
+   18  mv /var /var_old
+   19  sudo vi /etc/fstab 
+   20  mkdir /var
+   21  mount -a
+   22  python3
+   23  ls 
+   24  touch history-P1-L2.txt
+   25  history
+   26  history > history-P1-L2.txt 
+   27  cat history-P1-L2.txt 
+   28  lsblk >> history-P1-L2.txt 
+   29  cat history-P1-L2.txt 
+   30  ipaddr
+   31  ip addres
+   32  cat history-P1-L2.txt 
+   33  sudo poweroff
+   34  ls 
+   35  ls -la 
+   36  find / -n "history-P1-L2"
+   37  find / "history-P1-L2"
+   38  find / --name "history-P1-L2"
+   39  systemctl status
+   40  ls 
+   41  history
+   42  touch history-P1-L2.txt
+   43  history > history-P1-L2.txt 
+NAME           MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda              8:0    0   10G  0 disk 
+├─sda1           8:1    0    1G  0 part /boot
+└─sda2           8:2    0    9G  0 part 
+  ├─rl-root    253:0    0    8G  0 lvm  /
+  └─rl-swap    253:1    0    1G  0 lvm  [SWAP]
+sdb              8:16   0    8G  0 disk 
+└─sdb1           8:17   0    8G  0 part 
+  └─rl-new_var 253:2    0    3G  0 lvm  /var
+sr0             11:0    1  1.4G  0 rom  
