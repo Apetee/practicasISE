@@ -1,0 +1,76 @@
+    1  lsblk
+    2  useradd andres
+    3  passwd andres
+    4  usermod -aG wheel andres
+    5  visudo /etc/sudoers
+    6  systemctl status
+    7  lsblk
+    8  fdisk /dev/sdb 
+    9  fdisk /dev/sdc 
+   10  lsblk
+   11  sudo yum install mdadm
+   12  lsblk
+   13  mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1 
+   14  lsblk
+   15  pvcreate /dev/md0 
+   16  pvs
+   17  vgcreate vg_raid1 /dev/md0
+   18  vgs
+   19  lvcreate -n new_var -L 1.8G vg_raid1
+   20  lvs
+   21  dnf instal cryptsetup -y 
+   22  dnf install cryptsetup -y 
+   23  cryptsetuo luksFormat /dev/vg_raid1/new_var 
+   24  cryptsetup luksFormat /dev/vg_raid1/new_var 
+   25  cryptsetup luksOpen /dev/vg_raid1/new_var vg_raid1-new_var_crypt
+   26  cryptsetup luksFormat /dev/vg_raid1/new_var 
+   27  cryptsetup luksOpen /dev/vg_raid1/new_var vg_raid1-new_var_crypt
+   28  blkid | grep crypto > /etc/crypttab
+   29  ls /dev/mapper
+   30  mkfs -t xfs /dev/mapper/vg_raid1-new_var_crypt /new_var
+   31  mkdir /new_var
+   32  mount /dev/mapper/vg_raid1-new_var_crypt /new_var
+   33  systemctl isolate rescue
+   34  systemctl status
+   35  mkdir /new_var
+   36  mount /dev/mapper/vg_raid1-new_var_crypt /new_var
+   37  mount /dev/mapper/vg_raid1-new_var_crypt /new_var/
+   38  ls 
+   39  mkdir /new_var/
+   40  rm -r /new_var/
+   41  mkdir /new_var/
+   42  mount /dev/mapper/vg_raid1-new_var_crypt /new_var/
+   43  mkfs -t xfs /dev/mapper/vg_raid1-new_var_crypt 
+   44  mkdir /new_var/
+   45  mount /dev/mapper/vg_raid1-new_var_crypt /new_var/
+   46  cp -a /var/. /new_var/
+   47  ls -laZ /new_var/
+   48  vi /etc/fstab 
+   49  vi /etc/crypttab 
+   50  mv /var/ /var_old
+   51  mkdir /var
+   52  restorecon /var
+   53  mount -a
+   54  reboot
+   55  systemctl status
+   56  lsblk
+   57  ls 
+   58  touch historial-P1-L3.txt
+   59  history > historial-P1-L3.txt 
+NAME                           MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINTS
+sda                              8:0    0   20G  0 disk  
+├─sda1                           8:1    0    1G  0 part  /boot
+└─sda2                           8:2    0   19G  0 part  
+  ├─rl-root                    253:0    0   17G  0 lvm   /
+  └─rl-swap                    253:1    0    2G  0 lvm   [SWAP]
+sdb                              8:16   0   10G  0 disk  
+└─sdb1                           8:17   0   10G  0 part  
+  └─md127                        9:127  0   10G  0 raid1 
+    └─vg_raid1-new_var         253:2    0  1.8G  0 lvm   
+      └─vg_raid1-new_var_crypt 253:3    0  1.8G  0 crypt /var
+sdc                              8:32   0   10G  0 disk  
+└─sdc1                           8:33   0   10G  0 part  
+  └─md127                        9:127  0   10G  0 raid1 
+    └─vg_raid1-new_var         253:2    0  1.8G  0 lvm   
+      └─vg_raid1-new_var_crypt 253:3    0  1.8G  0 crypt /var
+sr0                             11:0    1 1024M  0 rom   
